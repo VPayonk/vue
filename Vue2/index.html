@@ -11,12 +11,21 @@
 <body>
 
 <div id="app">
-    <h1>String:  {{name}}</h1>
-    <h1>Sum (10 + 60): {{ 10 + 60 }} </h1>
-    <h1>Number: {{ number }}</h1>
-    <h1>Method: {{ sayHello() }}</h1>
-    <h1>If statement: {{  }} </h1>
+<!--BIND-->
+    <!--<h2>-->
+        <!--<a v-bind:href="url"> {{ url }}</a>-->
+    <!--</h2>-->
 
+<!--HTML-->
+    <!--<h2 v-html="link">-->
+    <!--</h2>-->
+
+<!--COUNTER-->
+    <!--<h2> {{ counter }}</h2>-->
+    <!--<button v-on:click="addOne">+</button>-->
+    <!--<hr>-->
+    <!--<h2 v-on:mouseover="onHover"> {{ counter2 }}</h2>-->
+    <!--<button v-on:click="counter2++">+</button>-->
 
 </div>
 
@@ -25,15 +34,19 @@
     new Vue({
         el: '#app',
         data: {
-          name: 'Vue!',
-          number: 100
+          // url: 'http://google.com'       BIND
+          // link: '<a href="http://google.com">Google</a>'     HTML
+          // counter: 0,                        COUNTER
+          // counter2: 0                        COUNTER
         },
-      methods: {
-        sayHello() {
-          return 'I am function'
-        },
-
-      }
+        methods: {
+            // addOne() {                           COUNTER
+            //   this.counter++;
+            // },
+            // onHover(e) {
+            //   e.target.style.color = 'red';
+            // }
+        }
 
     });
 
