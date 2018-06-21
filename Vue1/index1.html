@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!--<div class="wrapper">-->
+        <!--<div class="sample1">-->
+            <!--<input type="text" v-model="name">-->
+            <!--<hr>-->
+            <!--<h2>Hello, {{ name }} </h2>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<script>-->
+        <!--new Vue({-->
+            <!--el:'.sample1',-->
+            <!--data: {-->
+                <!--name:'QQQQ'-->
+            <!--},-->
+            <!--computed: {-->
+
+            <!--},-->
+
+        <!--});-->
+    <!--</script>-->
+
+
+    <!--<div class="wrapper">-->
+        <!--<div class="sample">-->
+            <!--<input type="text"-->
+                   <!--v-on:input = "name = $event.target.value"-->
+                   <!--v-on:change = "onChange"-->
+                  <!--&gt;-->
+            <!--<hr>-->
+            <!--<h2>Hello, {{ name }} </h2>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<script>-->
+        <!--new Vue({-->
+            <!--el:'.sample',-->
+            <!--data: {-->
+                <!--name:'QQQQ'-->
+            <!--},-->
+            <!--methods: {-->
+                <!--onChange (e) {-->
+                  <!--console.log(this);-->
+                  <!--console.log(e)-->
+                <!--}-->
+            <!--}-->
+        <!--});-->
+    <!--</script>-->
+
+    <!--<div class="wrapper">-->
+        <!--<div class="sample">-->
+            <!--<input type="text"-->
+                   <!--@input = "name = $event.target.value"-->
+                   <!--:value = "name"-->
+                   <!--&gt;-->
+            <!--<hr>-->
+            <!--<button class="btn btn-success"-->
+                    <!--@click="showName = !showName"-->
+                    <!--&gt;-->
+                <!--Toggle Name-->
+            <!--</button>-->
+
+            <!--<button class="btn btn-primary"-->
+                    <!--@click="toggleName"-->
+                    <!--&gt;-->
+                <!--Toggle Name2-->
+            <!--</button>-->
+
+            <!--<h2 v-show="showName" class="show">Hello, {{ name }} </h2>-->
+            <!--<h2 v-if="showName">Hello, {{ name }} </h2>-->
+
+            <!--<div v-else>Name is hidden</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<script>-->
+      <!--new Vue({-->
+        <!--el:'.sample',-->
+        <!--data: {-->
+          <!--name:'Default',-->
+          <!--showName: true-->
+        <!--},-->
+        <!--methods: {-->
+          <!--toggleName() {-->
+            <!--this.showName = !this.showName;-->
+          <!--}-->
+        <!--}-->
+      <!--});-->
+    <!--</script>-->
+
+
+    <!--<div class="wrapper">-->
+        <!--<div class="sample">-->
+            <!--<input type="text" v-model="firstName">-->
+            <!--<hr>-->
+            <!--<input type="text" v-model="lastName">-->
+            <!--<hr>-->
+            <!--<h2>Hello, {{ fullName }} </h2>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<script>-->
+      <!--new Vue({-->
+        <!--el:'.sample',-->
+        <!--data: {-->
+          <!--firstName:'',-->
+          <!--lastName:'',-->
+          <!--fullName: ''-->
+        <!--},-->
+        <!--computed: {-->
+            <!--fullName() {-->
+              <!--return this.firstName + ' ' + this.lastName;-->
+            <!--}-->
+        <!--}-->
+        <!--watch: {-->
+          <!--firstName() {-->
+            <!--this.fullName = this.firstName + ' ' + this.lastName;-->
+          <!--},-->
+          <!--lastName() {-->
+            <!--this.fullName = this.firstName + ' ' + this.lastName;-->
+          <!--}-->
+        <!--}-->
+      <!--});-->
+    <!--</script>-->
+
+
+    <!--<div class="wrapper">-->
+        <!--<div class="sample">-->
+            <!--<button class="btn btn-success"-->
+                    <!--v-on:click="addNumber">-->
+                <!--Add number-->
+            <!--</button>-->
+            <!--<button class="btn btn-primary"-->
+                    <!--v-on:click="sortNumbers">-->
+                <!--Sort-->
+            <!--</button>-->
+            <!--<ul>-->
+                <!--<li v-for="(number, index) in numbers"-->
+                    <!--v-on:mouseenter="$event.target.style.color = 'red'"-->
+                    <!--v-on:mouseleave="$event.target.style.color = 'black'"-->
+                <!--&gt;-->
+                    <!--{{ index }} - {{ number }}-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<hr>-->
+            <!--<table class="table table-bordered">-->
+                <!--<tr v-for="(value, key, i) in info" :key="key">-->
+                    <!--<td>{{ i }}</td>-->
+                    <!--<td>{{ key }}</td>-->
+                    <!--<td>{{ value }}</td>-->
+                <!--</tr>-->
+            <!--</table>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<script>-->
+      <!--new Vue({-->
+        <!--el:'.sample',-->
+        <!--data: {-->
+            <!--numbers: [],-->
+            <!--info: {-->
+              <!--name: 'qqq',-->
+              <!--email: 'v.payonk@gmail.com'-->
+            <!--}-->
+        <!--},-->
+        <!--methods: {-->
+          <!--addNumber() {-->
+            <!--this.numbers.push(Math.floor(Math.random() * 100))-->
+          <!--},-->
+          <!--sortNumbers() {-->
+            <!--this.numbers.sort(function(a, b) {-->
+              <!--return a - b;-->
+            <!--});-->
+          <!--}-->
+        <!--}-->
+      <!--});-->
+    <!--</script>-->
+
+
+
+    <!--<div class="wrapper">-->
+        <!--<div class="sample">-->
+            <!--<button class="btn btn-success"-->
+                    <!--v-on:click="addNumber">-->
+                <!--Add number-->
+            <!--</button>-->
+            <!--<button class="btn btn-primary"-->
+                    <!--v-on:click="sortNumbers">-->
+                <!--Sort-->
+            <!--</button>-->
+            <!--<ul>-->
+                <!--<li v-for="(number, index) in numbers"-->
+                    <!--v-on:mouseenter="onMouseEnter($event, index)"-->
+                    <!--v-on:mouseleave="onMouseLeave($event, index)"-->
+                <!--&gt;-->
+                    <!--{{ index }} - {{ number }}-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<hr>-->
+            <!--<table class="table table-bordered">-->
+                <!--<tr v-for="(value, key, i) in info" :key="key">-->
+                    <!--<td>{{ i }}</td>-->
+                    <!--<td>{{ key }}</td>-->
+                    <!--<td>{{ value }}</td>-->
+                <!--</tr>-->
+            <!--</table>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<script>-->
+      <!--new Vue({-->
+        <!--el:'.sample',-->
+        <!--data: {-->
+          <!--numbers: [],-->
+          <!--info: {-->
+            <!--name: 'qqq',-->
+            <!--email: 'v.payonk@gmail.com'-->
+          <!--}-->
+        <!--},-->
+        <!--methods: {-->
+          <!--addNumber() {-->
+            <!--this.numbers.push(Math.floor(Math.random() * 100))-->
+          <!--},-->
+          <!--sortNumbers() {-->
+            <!--this.numbers.sort(function(a, b) {-->
+              <!--return a - b;-->
+            <!--});-->
+          <!--},-->
+          <!--onMouseEnter(e, index) {-->
+            <!--if (index %2 == 1) {-->
+              <!--e.target.style.color = 'red';-->
+            <!--}-->
+          <!--},-->
+          <!--onMouseLeave(e, index) {-->
+            <!--if (index %2 == 1) {-->
+              <!--e.target.style.color = 'black';-->
+            <!--}-->
+          <!--}-->
+        <!--}-->
+      <!--});-->
+    <!--</script>-->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-offset-md-6">
+                <div class="wrapper">
+                    <div class="sample">
+                        <div v-if="showTable">
+                            <label>
+                                <strong>Email</strong>
+                                <input type="text" v-model="info.email">
+                            </label>
+                            <label>
+                                <strong>First Name</strong>
+                                <input type="text" v-model="info.firstName">
+                            </label>
+                            <label>
+                                <strong>Last Name</strong>
+                                <input type="text" v-model="info.lastName">
+                            </label>
+                            <label>
+                                <strong>Phone</strong>
+                                <input type="text" v-model="info.phone">
+                            </label>
+                            <br>
+                            <div>
+                                <strong>Guest</strong>
+                                <button class="btn btn-primary"
+                                        @click="addGuest"
+                                >
+                                    +
+                                </button>
+                                <ul>
+                                    <li v-for="(guest, index) in guests"
+                                        @dblclick="removeGuest(index)"
+                                    >
+                                        <strong>Guests {{index + 1}}</strong>
+                                        <br>
+                                        <input type="text" v-model="guests[index]">
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <br>
+                        </div>
+
+
+                        <table class="table table-bordered"
+                               v-else
+                        >
+                            <tr v-for="(value, key, i) in info" :key="key">
+                                <td>{{ key }}</td>
+                                <td>{{ value }}</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    guests
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li v-for="(guest,index) in guests" >
+                                            {{ guest }}
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        <button class="btn btn-success"
+                                @click="removeBlock">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        new Vue({
+            el:'.sample',
+            data: {
+              info: {
+                email: ' ',
+                firstName: ' ',
+                lastName: ' ',
+                phone: ' '
+              },
+              guests: [],
+              showTable: true
+            },
+            methods: {
+              removeBlock() {
+                this.showTable = !this.showTable;
+              },
+              addGuest() {
+                this.guests.push('');
+              },
+              removeGuest(index) {
+                this.guests.splice(index,1);
+              }
+            }
+
+        });
+    </script>
+
+
+
+</body>
+<!--<script src="js/js.js"></script>-->
+</html>

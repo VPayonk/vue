@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+
+
+
+<!--<div class="wrapper">-->
+    <!--<div class="sample">-->
+        <!--<div class="form-group">-->
+            <!--<label>First Name</label>-->
+            <!--<input type="text"-->
+                   <!--class="form-control"-->
+                   <!--v-mode="firstName"-->
+            <!--&gt;-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+
+<!--<script>-->
+  <!--new Vue({-->
+    <!--el:'.sample',-->
+    <!--data: {-->
+        <!--firstName: ''-->
+    <!--},-->
+    <!--beforeCreate() {-->
+      <!--console.log('beforeCreate')-->
+    <!--},-->
+    <!--created() {-->
+      <!--console.log('created')-->
+    <!--},-->
+    <!--beforeMount() {-->
+      <!--console.log('beforeMount')-->
+    <!--},-->
+    <!--mounted() {-->
+      <!--console.log('mounted')-->
+    <!--}-->
+
+  <!--});-->
+<!--</script>-->
+
+
+<!--<div class="wrapper">-->
+    <!--<div class="sample">-->
+        <!--<div class="form-group">-->
+            <!--<label>Phone</label>-->
+            <!--<input type="text"-->
+                   <!--class="form-control"-->
+                   <!--v-model.lazy="phone"-->
+                   <!--@keyup.alt="show = true"-->
+            <!--&gt;-->
+            <!--<div v-show="show">-->
+                <!--{{ phone }}-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<script>-->
+  <!--new Vue({-->
+    <!--el:'.sample',-->
+    <!--data: {-->
+      <!--phone: '',-->
+      <!--show: false-->
+    <!--},-->
+    <!--methods: {-->
+
+    <!--}-->
+
+  <!--});-->
+<!--</script>-->
+
+
+<!--<style>-->
+    <!--.my-info {-->
+        <!--font-family: "Roboto Mono Medium";-->
+    <!--}-->
+    <!--.my-warning {-->
+        <!--font-size: 25px;-->
+    <!--}-->
+<!--</style>-->
+
+<!--<div class="wrapper">-->
+    <!--<div class="sample">-->
+        <!--<div class="alert" :class="divClassName">-->
+            <!--Some text-->
+        <!--</div>-->
+        <!--<div class="form-check">-->
+            <!--<label class="form-check-label">-->
+                <!--<input type="radio"-->
+                       <!--class="form-check-input"-->
+                       <!--value="info"-->
+                       <!--v-model="divClass"-->
+                <!--&gt;-->
+                <!--Info-->
+            <!--</label>-->
+        <!--</div>-->
+        <!--<div class="form-check">-->
+            <!--<label class="form-check-label">-->
+                <!--<input type="radio"-->
+                       <!--class="form-check-input"-->
+                       <!--value="warning"-->
+                       <!--v-model="divClass"-->
+                <!--&gt;-->
+                <!--Warning-->
+            <!--</label>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<script>-->
+  <!--new Vue({-->
+    <!--el:'.sample',-->
+    <!--data: {-->
+        <!--divClass: 'info'-->
+    <!--},-->
+    <!--computed: {-->
+        <!--divClassName () {-->
+            <!--return [-->
+                <!--'alert-' + this.divClass,-->
+                <!--'my-' + this.divClass-->
+            <!--]-->
+        <!--}-->
+    <!--}-->
+
+  <!--});-->
+<!--</script>-->
+
+
+<!--<style>-->
+    <!--.table-some {-->
+        <!--color: red;-->
+    <!--}-->
+<!--</style>-->
+
+<!--<div class="wrapper">-->
+    <!--<div class="sample">-->
+        <!--<div class="alert" :class="divClassName">-->
+            <!--Some text-->
+        <!--</div>-->
+
+        <!--<div class="form-check" v-for="(value, name) in flags">-->
+            <!--<label class="form-check-label">-->
+                <!--<input type="checkbox"-->
+                       <!--class="form-check-input"-->
+                       <!--value="warning"-->
+                       <!--v-model="flags[name]"-->
+                <!--&gt;-->
+                <!--{{ name }}-->
+            <!--</label>-->
+        <!--</div>-->
+        <!--<hr>-->
+        <!--<table class="table" :class="flags">-->
+            <!--<tr>-->
+                <!--<td>Title</td>-->
+                <!--<td>Some</td>-->
+                <!--<td>nz</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>Title</td>-->
+                <!--<td>Some</td>-->
+                <!--<td>nz</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>Title</td>-->
+                <!--<td>Some</td>-->
+                <!--<td>nz</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<script>-->
+  <!--new Vue({-->
+    <!--el:'.sample',-->
+    <!--data: {-->
+      <!--flags: {-->
+        <!--'table-bordered' : false,-->
+        <!--'table-hover' : false,-->
+        <!--'table-some' : false-->
+      <!--}-->
+    <!--}-->
+  <!--});-->
+<!--</script>-->
+
+
+
+
+<!--<div class="wrapper">-->
+    <!--<div class="sample">-->
+        <!--<div class="alert" :style="[properties, minHeight]">-->
+            <!--Some text-->
+        <!--</div>-->
+        <!--<hr>-->
+        <!--<table class="table table-bordered">-->
+            <!--<tr v-for="(value, name) in properties">-->
+                <!--<td>{{ name }}</td>-->
+                <!--<td>-->
+                    <!--<input type="text"-->
+                            <!--v-model="properties[name]"-->
+                    <!--&gt;-->
+                <!--</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+        <!--<hr>-->
+        <!--<button class="btn"-->
+                <!--@click="height += 10"-->
+        <!--&gt;-->
+            <!--+height-->
+        <!--</button>-->
+        <!--{{ minHeight }}-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<script>-->
+  <!--new Vue({-->
+    <!--el:'.sample',-->
+    <!--data: {-->
+      <!--properties: {-->
+        <!--color : 'red',-->
+        <!--backgroundColor : 'black'-->
+      <!--},-->
+      <!--height: 0-->
+    <!--},-->
+    <!--computed: {-->
+      <!--minHeight() {-->
+        <!--// return 'min-height:' + this.height + 'px';-->
+        <!--return {-->
+          <!--minHeight: this.height + 'px'-->
+        <!--};-->
+
+      <!--}-->
+
+    <!--}-->
+  <!--});-->
+<!--</script>-->
+
+
+<style>
+    .green {
+        color: green;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .fa {
+        font-size: 20px;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="sample">
+        <form v-if="see">
+            <div class="progress">
+                <div class="progress-bar" :style="progressWidth"></div>
+            </div>
+            <div class="form-control"
+                 v-for="(input, index) in inputs"
+            >
+                <label>
+                    {{ input.name }}
+                    <i class="fa"
+                       v-if="controls[index].activated"
+                        :class="controls[index].error ?
+                              'fa-exclamation-circle text-danger' :
+                              'fa-check-circle text-success'
+                             "
+                    >
+                    </i>
+                    <input type="text"
+                           class="form-control"
+                           :value="input.value"
+                           @input="onInput(index, $event.target.value)"
+                    >
+                </label>
+
+            </div>
+
+            <button class="btn btn-primary"
+                    type="button"
+                    :disabled="done < inputs.length"
+                    v-on:click="changeSee"
+            >
+                Send Data
+            </button>
+        </form>
+        <div v-if="!see">
+            <table class="table table-border">
+                <tr v-for="(input, index) in inputs" >
+                    <td> {{ input.name }} </td>
+                    <td> {{ input.value }} </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+  var app = new Vue({
+    el:'.sample',
+    data: {
+      inputs: [
+        {
+          name: 'Name',
+          value: 'ERR',
+          pattern: /^[a-zA-Z]{2,30}$/
+        },
+        {
+          name: 'Phone',
+          value: '34',
+          pattern: /^[0-9]{7,14}$/
+        },
+        {
+          name: 'Email',
+          value: '',
+          pattern: /.+/
+        },
+        {
+          name: 'Some Field 1',
+          value: '',
+          pattern: /.+/
+        },
+        {
+          name: 'Some Field 2',
+          value: '',
+          pattern: /.+/
+        }
+      ],
+      controls: [],
+      see: true
+    },
+    methods: {
+      onInput(index, value) {
+        var control = this.controls[index];
+        var data = this.inputs[index];
+
+        data.value = value;
+        control.error = !data.pattern.test(value);
+        control.activated = true;
+      },
+      changeSee() {
+        this.see = !this.see;
+      }
+    },
+    beforeMount() {
+      for (var i = 0; i < this.inputs.length; i++) {
+        this.controls.push({
+            error: !this.inputs[i].pattern.test(this.inputs[i].value),
+            activated: this.inputs[i].value != ''
+        })
+      }
+    },
+    computed: {
+      done() {
+        var done = 0;
+
+        for(var i = 0; i < this.controls.length; i++ ) {
+          if(!this.controls[i].error) {
+            done++;
+          }
+        }
+
+        return done;
+      },
+      progressWidth() {
+        return {
+          width: (100 / this.inputs.length * this.done) + '%'
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
