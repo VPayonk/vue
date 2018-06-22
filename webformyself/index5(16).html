@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <ul >
+        <li v-for="(person, i) in people">
+            {{ i + 1 }} : {{ person }}
+        </li>
+    </ul>
+    <hr>
+    <ul>
+        <li v-for="(person, i) of peopleO">
+            {{ i + 1 }} : {{ person.name }} - <b>{{ person.age }}</b>
+        </li>
+    </ul>
+    <hr>
+    <ol>
+        <li v-for="num of 4">
+            {{ num }}
+        </li>
+    </ol>
+    <hr>
+    <ul>
+        <li v-for="(value, key, index) in person">
+            <em>{{ index + 1 }}</em> <b>{{ key }}</b> {{ value }}
+        </li>
+    </ul>
+
+
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+        people: [
+            'Max',
+            'Den',
+            'Vin',
+            'Vova'
+        ],
+        peopleO: [
+          {name: 'Maxim', age: 20},
+          {name: 'Denys', age: 23},
+          {name: 'Viniamin', age: 28},
+          {name: 'Volodymyr', age: 29},
+        ],
+      person: {
+        name: 'Max',
+        age: 50,
+        job: 'front'
+      }
+    }
+  });
+
+</script>
+</body>
+</html>

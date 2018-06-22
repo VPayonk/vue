@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <button @click="visible = !visible">!!!</button>
+
+    <h2 v-if="type === 'a'">a</h2>
+    <h2 v-else-if="type === 'b'">b</h2>
+    <h2 v-else-if="type === 'c'">c</h2>
+    <h2 v-else>not match</h2>
+
+    <input type="text"
+           v-model="type"
+    >
+    <hr>
+    <template v-if="visible">
+        <h2>i`m title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, molestias.</p>
+    </template>
+    <template v-else="!visible">
+        <h2 style="color: red;">i`m title</h2>
+        <p style="color: blue;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, molestias.</p>
+    </template>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <h1 v-show="visible">I`m visible</h1>
+    <h2 v-show="!visible">You can`t see me!</h2>
+
+
+
+
+</div>
+
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      visible: true,
+      type: 'a',
+    },
+    methods: {
+
+    },
+    computed: {
+
+    }
+  });
+
+</script>
+</body>
+</html>

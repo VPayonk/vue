@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<style>
+    .circle {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin: 50px;
+    }
+
+    .red {
+        background: red;
+    }
+
+    .blue {
+        background: blue;
+    }
+
+    .green {
+        background: green;
+    }
+</style>
+
+<div id="app">
+    <h2>
+        <a :href="url">Google</a>
+    </h2>
+    <h2>
+        {{ counter }}
+    </h2>
+    <button @click="counter++">+</button>
+    <hr>
+    <input type="text" v-model.lazy="text">
+    <h2>{{ text }}</h2>
+    <hr>
+    <div class="circle"
+         @click="isActive = !isActive"
+         :class="getCssClass"
+    ></div>
+
+    <div class="circle"
+         :class="[color, {'red': isActive}]"
+    ></div>
+    <input type="text"
+           v-model="color"
+    >
+    <hr>
+    <div class="circle"
+        :style="getStyle"
+    ></div>
+    <div class="circle"
+         :style="[getStyle, {'width': height + 'px'}]"
+    ></div>
+
+    <input type="text"
+           v-model="style"
+    >
+    <input type="text"
+           v-model="height"
+    >
+
+</div>
+
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      url: 'http://google.com',
+      counter: 0,
+      text: 'Initial value',
+      isActive: false,
+      color: 'blue',
+      style: 'red',
+      height: 100,
+    },
+    methods: {
+
+    },
+    computed: {
+      getCssClass() {
+        return {
+          'red': this.isActive,
+          'blue': !this.isActive,
+        };
+      },
+      getStyle() {
+        return {
+          'background': this.style,
+          'height': this.height + 'px'
+        }
+      }
+    }
+
+  });
+
+</script>
+</body>
+</html>

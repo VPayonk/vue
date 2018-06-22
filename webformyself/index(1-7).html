@@ -27,6 +27,12 @@
     <!--<h2 v-on:mouseover="onHover"> {{ counter2 }}</h2>-->
     <!--<button v-on:click="counter2++">+</button>-->
 
+    <h2> {{ title }} = {{ counter }}</h2>
+    <button v-on:click="addOne(5, '+5', $event)">+5</button>
+    <button v-on:click="addOne(10, '+10', $event)">+10</button>
+
+
+
 </div>
 
 
@@ -36,13 +42,21 @@
         data: {
           // url: 'http://google.com'       BIND
           // link: '<a href="http://google.com">Google</a>'     HTML
-          // counter: 0,                        COUNTER
+          counter: 0,
           // counter2: 0                        COUNTER
+          title: 'Щотчик'
         },
         methods: {
-            // addOne() {                           COUNTER
-            //   this.counter++;
-            // },
+            addOne(number, str, e) {
+              this.counter += number;
+              this.title = str;
+
+              if(number === 5) {
+                event.target.style.color = 'blue'
+              } else if (number == 10) {
+                event.target.style.color = 'red'
+              }
+            },
             // onHover(e) {
             //   e.target.style.color = 'red';
             // }
