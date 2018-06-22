@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <h2>
+        Counter {{ counter }} \ {{ counter2 }}
+    </h2>
+    <h3>
+        {{ result() }}
+    </h3>
+    <h3>
+        computed resalt:
+        {{ resultComputed }}
+    </h3>
+    <button @click="add">+</button>
+    <button @click="sub">-</button>
+    <button @click="counter2++">+(counter2)</button>
+
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      counter: 0,
+      counter2: 0,
+    },
+    methods: {
+      add() {
+        this.counter ++;
+      },
+      sub() {
+        this.counter --;
+      },
+      result() {
+        console.log('resalt');
+        return this.counter > 3 ? 'More than 3' : "Less than 3";
+      }
+    },
+    computed: {
+      resultComputed() {
+        console.log('resalt Computed');
+        return this.counter > 3 ? 'More than 3' : "Less than 3";
+      }
+    },
+    watch: {
+      counter(value) {
+        console.log (value);
+      }
+    }
+  });
+
+</script>
+</body>
+</html>
