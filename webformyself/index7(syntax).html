@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <h2> {{ title }} </h2>
+    <h3> {{ newField }} </h3>
+    <button @click="title = 'Update title'">Update title</button>
+
+</div>
+
+<div id="app2">
+    <h2> {{ title }} </h2>
+    <button @click="updateFirstTitle">Update first title</button>
+
+</div>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+        title: 'Hello i`m Vue',
+    },
+    methods: {
+        alertFast() {
+          alert('i`m from APP')
+        }
+    }
+  });
+  console.log(app);
+  app.newField = 'Random text';
+
+  var app2 = new Vue({
+    el: '#app2',
+    data: {
+      title: 'Hello i`m Vue 2',
+    },
+    methods: {
+        updateFirstTitle() {
+            app.title = 'Update from APP2';
+            app.newField = 'New random text';
+            setTimeout(function() {
+              app.alertFast();
+            },1000)
+        }
+    }
+  });
+
+</script>
+</body>
+</html>

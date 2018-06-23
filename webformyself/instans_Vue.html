@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <h2>{{ title }}</h2>
+    <button @click="title = 'Changed title'">Change</button>
+</div>
+
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      title: 'Hello i`m Vue'
+    },
+    beforeCreate() {
+      console.log('Before Created');
+    },
+    created() {
+      console.log('Created');
+    },
+    beforeMount() {
+      console.log('Before Mount');
+    },
+    mounted() {
+      console.log('Mounted');
+    }
+
+  });
+
+
+
+</script>
+</body>
+</html>
