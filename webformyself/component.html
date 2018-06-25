@@ -11,35 +11,69 @@
 <body>
 
 <div id="app">
-
-    <my-counter v-for="c in 20"></my-counter>
-
-
-
+    <my-counter v-for="c in 2"></my-counter>
+</div>
+<hr>
+<div id="app2">
+    <my-counter></my-counter>
 </div>
 
 <script>
-Vue.component('my-counter', {
-  template: `
-    <div style="border: 1px solid red; padding: 10px">
-        <h2>Counter: {{ counter }}</h2>
-        <button @click="add">Counter +</button>
-    </div>
-  `,
-  data() {
-    return {
-      counter: 0
-    }
-  },
-  methods: {
-    add() {
-      this.counter++;
-    }
-  }
-});
- new Vue({
-    el: '#app'
-  });
+    // local component in Vue object
+    var component = {
+      template: `
+        <div style="border: 1px solid red; padding: 10px">
+            <h2>Counter: {{ counter }}</h2>
+            <button @click="add">Counter +</button>
+        </div>
+      `,
+      data() {
+        return {
+          counter: 0
+        }
+      },
+      methods: {
+        add() {
+          this.counter++;
+        }
+      }
+    };
+
+
+    // Vue.component('my-counter', {  global component
+    //   template: `
+    //     <div style="border: 1px solid red; padding: 10px">
+    //         <h2>Counter: {{ counter }}</h2>
+    //         <button @click="add">Counter +</button>
+    //     </div>
+    //   `,
+    //   data() {
+    //     return {
+    //       counter: 0
+    //     }
+    //   },
+    //   methods: {
+    //     add() {
+    //       this.counter++;
+    //     }
+    //   }
+    // });
+
+    new Vue({
+        el: '#app',
+      //init local component in Vue object
+        components: {
+          'my-counter' : component
+        }
+    });
+
+    new Vue({
+      el: '#app2',
+      //init local component in Vue object
+      components: {
+        myCounter : component
+      }
+    })
 
 
 
