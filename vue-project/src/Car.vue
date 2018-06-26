@@ -6,6 +6,7 @@
         <p>
             Year : {{ carYear }}
         </p>
+        <button @click="changeName">Change name</button>
     </div>
 </template>
 
@@ -23,6 +24,12 @@
         default: 'Default name'
       },
       carYear: Number
+    },
+    methods: {
+      changeName() {
+        this.carName = 'Mazda'
+        this.$emit('nameChanged', this.carName)
+      }
     },
     computed:  {
       revertName() {
