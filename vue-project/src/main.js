@@ -5,10 +5,11 @@ import App from './App.vue'
 //
 // Vue.component('app-car', Car)
 
+export const eventEmitter = new Vue();
+
 new Vue({
   el: '#app',
   render: h => h(App)
 });
 
 
-export const eventEmiter = new Vue()
