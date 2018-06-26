@@ -7,6 +7,7 @@
             Year : {{ carYear }}
         </p>
         <button @click="changeName">Change name</button>
+        <button @click="changeNameToAudi">Change name from parent</button>
     </div>
 </template>
 
@@ -23,7 +24,8 @@
         required: true,
         default: 'Default name'
       },
-      carYear: Number
+      carYear: Number,
+      changeNameToAudi: Function
     },
     methods: {
       changeName() {
