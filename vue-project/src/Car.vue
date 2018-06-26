@@ -8,6 +8,7 @@
         </p>
         <button @click="changeName">Change name</button>
         <button @click="changeNameToAudi">Change name from parent</button>
+        <button @click="updateCounter">Update counter</button>
     </div>
 </template>
 
@@ -21,16 +22,19 @@
     props: {
       carName: {
         type: String,
-        required: true,
         default: 'Default name'
       },
       carYear: Number,
-      changeNameToAudi: Function
+      changeNameToAudi: Function,
+      counter: Number
     },
     methods: {
       changeName() {
-        this.carName = 'Mazda'
+        this.carName = 'Mazda';
         this.$emit('nameChanged', this.carName)
+      },
+      updateCounter() {
+        this.$emit('counterUpdate', this.counter + 1)
       }
     },
     computed:  {
