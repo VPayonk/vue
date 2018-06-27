@@ -1,7 +1,10 @@
 <template>
   <div>
-    <app-counter></app-counter>
-    <app-car></app-car>
+    <!--<app-counter></app-counter>-->
+    <app-car>
+        <h2 slot="title">{{carName}}</h2>
+        <p slot="text">Lorem ipsum dolor.</p>
+    </app-car>
   </div>
 </template>
 
@@ -10,6 +13,11 @@
   import Counter from './Counter.vue'
 
 export default {
+    data() {
+      return {
+        carName: 'Mazda'
+      }
+    },
   components: {
     appCar: Car,
     appCounter: Counter
@@ -18,5 +26,7 @@ export default {
 </script>
 
 <style scoped lang="scss" >
-
+    h2 {
+        color: blue;
+    }
 </style>
