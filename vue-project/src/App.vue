@@ -6,8 +6,9 @@
         <!--<p slot="text">Lorem ipsum dolor.</p>-->
     <!--</app-car>-->
 
-      <h3 v-colored:background="'green'">{{ title }}</h3>
-      <h3 v-colored:color="'blue'">{{ title }}</h3>
+      <h3 v-colored:background.font="'green'">{{ title }}</h3>
+      <h3 v-colored:color.delay.font="'blue'">{{ title }}</h3>
+
 
 
 
