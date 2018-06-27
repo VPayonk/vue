@@ -6,10 +6,8 @@
         <!--<p slot="text">Lorem ipsum dolor.</p>-->
     <!--</app-car>-->
 
-      <h3 v-colored v-if="visible">{{ title }}</h3>
+      <h3 v-colored="'green'">{{ title }}</h3>
 
-      <button @click="visible = !visible">Visible</button>
-      <button @click="title = 'New title'">Change title</button>
   </div>
 </template>
 
