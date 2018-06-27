@@ -5,7 +5,10 @@ import App from './App.vue'
 //
 // Vue.component('app-car', Car)
 
-export const eventEmitter = new Vue();
+// export const eventEmitter = new Vue();
+
+import ColorDirective from './color'
+Vue.directive('colored', ColorDirective);
 
 new Vue({
   el: '#app',
