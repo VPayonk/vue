@@ -10,6 +10,9 @@
       <h3 v-colored:color.delay.font="'blue'">{{ title }}</h3>
 
 
+      <p v-font-directive>Local font directive</p>
+
+
 
 
   </div>
@@ -27,6 +30,13 @@ export default {
         visible: true
       }
     },
+    directives: {
+      fontDirective: {
+        bind(el, bindings, vnode) {
+            el.style.fontSize = '40px'
+        }
+      }
+    }
   // components: {
   //   appCar: Car,
   //   appCounter: Counter
